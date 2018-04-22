@@ -23,22 +23,18 @@ h5 {.ui-text-subhead;}
 
 <b>CHECKBOX</b>
 .ui-checkbox
-  <code>
     <label class="ui-checkbox">
       <input type="checkbox">
       <span></span>
       Checkbox-2
     </label>
-  </code>
 
 <b>RADIO</b>
 .ui-radio
-  <code>
     <label class="ui-radio">
       <input type="radio">
       <span></span>
       Radio-2
     </label>
-  </code>
 
 </pre>
