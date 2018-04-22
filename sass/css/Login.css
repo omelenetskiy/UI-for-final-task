@@ -1,0 +1,34 @@
+body {
+  min-width: 320px;
+  padding: 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-image: url("../../img/bg/mountains.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.login {
+  margin: auto;
+}
+
+.ui-card {
+  width: 320px;
+}
+
+.ui-card__content label {
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.ui-card__actions .form__actions__link {
+  margin: 10px 0;
+}
+
+@media screen and (max-width: 420px) {
+  .ui-card {
+    width: 100%;
+  }
+}

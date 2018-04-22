@@ -1,0 +1,158 @@
+$green-color: rgb(174, 213, 129)
+$green-color-light: rgba(174, 213, 129, .2)
+$online: #4CAF50
+$offline: #FF7043
+$room-height: 45px
+$user-height: 58px
+$search-bar-height: 50px
+$logged-user-bar-height: 75px
+$sidebar-title-bar-height: 54px
+$chat-height: $room-height * 3 + $user-height * 4 + $search-bar-height + $logged-user-bar-height + $sidebar-title-bar-height
+
+body
+  display: flex
+  padding: 15px
+  background-image: url('../../img/bg/mountains.jpg')
+  background-size: cover
+  background-repeat: no-repeat
+  background-position: center
+
+.chat
+  margin: auto
+  height: $chat-height
+  width: 100%
+  max-width: 1000px
+  display: inline-flex
+  flex-direction: row
+  background-color: #ffffff
+  border-radius: 4px
+  overflow: hidden
+  &__sidebar
+    background-color: #fff
+    height: 100%
+    width: 300px
+    &__logged-user
+      width: 100%
+      height: $logged-user-bar-height
+      display: inline-flex
+      flex-direction: row
+      flex-wrap: nowrap
+      align-items: center
+      justify-content: space-between
+      padding: 16px
+      border-bottom: 1px solid rgba(155, 155, 155, .2)
+      .logged-user__wrapper
+        display: inline-flex
+        flex-direction: row
+        align-items: center
+        .logged-user__avatar
+          margin-right: 8px
+        .logged-user__data
+          h4, h5
+            margin: 0
+            padding: 0
+            line-height: 1
+          h4
+            font-weight: 500
+          h5 
+            font-size: 12px
+    &__search-bar
+      width: 100%
+      height: $search-bar-height
+      display: inline-flex
+      align-items: center
+      justify-content: center
+      padding: 8px 16px
+      border-bottom: 1px solid rgba(155, 155, 155, .2)
+      input[type=text]
+        background-color: $green-color-light
+        border: 0
+        padding: 8px
+        border-radius: 4px
+        color: #000000
+        &:focus
+          border: 2px solid $green-color
+    &__rooms
+      .sidebar__rooms__title
+        width: 100%
+        height: $sidebar-title-bar-height
+        padding: 8px 16px
+        display: inline-flex
+        flex-direction: row
+        align-items: center
+        justify-content: space-between
+        border-bottom: 1px solid rgba(155, 155, 155, .2)
+      .sidebar__rooms__list
+        height: $room-height * 3
+        overflow: auto
+        .room
+          width: 100%
+          height: $room-height
+          padding: 8px
+          display: inline-flex
+          flex-direction: row
+          align-items: center
+          &:hover
+            cursor: pointer
+            background-color: $green-color-light
+          &__avatar
+            margin-right: 8px
+    &__users
+      .sidebar__users__title
+        width: 100%
+        height: $sidebar-title-bar-height
+        padding: 8px 16px
+        display: inline-flex
+        flex-direction: row
+        align-items: center
+        justify-content: space-between
+        border-top: 1px solid rgba(155, 155, 155, .2)
+        border-bottom: 1px solid rgba(155, 155, 155, .2)
+      .sidebar__users__list
+        overflow: auto
+        height: $user-height * 4
+        .user
+          width: 100%
+          height: $user-height
+          padding: 8px
+          display: inline-flex
+          flex-direction: row
+          align-items: center
+          &:hover
+            cursor: pointer
+            background-color: $green-color-light
+          &__avatar
+            margin-right: 8px
+            position: relative
+            span.online, span.offline
+              display: block
+              position: absolute
+              bottom: 0
+              right: 0
+              width: 12px
+              height: 12px
+              border: 2px solid #ffffff
+              border-radius: 50%
+            span.online
+              background-color: $online
+            span.offline
+              background-color: $offline
+          &__data
+            display: inline-flex
+            flex-direction: row
+            align-items: center
+            justify-content: space-between 
+            flex-grow: 1
+            &__name-text
+              p
+                margin: 0
+                padding: 0
+            &__noti
+              background-color: $green-color
+              color: #ffffff
+              padding: 1px 5px
+              border-radius: 4px
+  &__main
+    background-color: $green-color-light
+    height: 100%
+    flex-grow: 1

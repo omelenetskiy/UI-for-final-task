@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Chat</title>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg" crossorigin="anonymous">
+  <link rel="stylesheet" href="sass/css/main.css">
+  <link rel="stylesheet" href="sass/css/Chat.css">
+</head>
+<body>
+  
+  <div class="chat">
+    <div class="chat__sidebar">
+      <!-- USER -->
+      <div class="chat__sidebar__logged-user">
+        <div class="logged-user__wrapper">
+          <div class="logged-user__avatar">
+            <i class="far fa-user-circle fa-3x"></i>
+          </div>
+          <div class="logged-user__data">
+            <h4 class="ui-text-title">Alex Omelenetskiy</h4>
+            <h5 class="ui-text-subhead">amelianetski@gmail.com</h5>
+          </div>
+        </div>
+        <div class="logged-user__sign-out">
+          <button class="ui-button_icon">
+            <i class="fas fa-sign-out-alt"></i>
+          </button>
+        </div>
+      </div>
+      <!-- /USER -->
+      <!-- SEARCH -->
+      <div class="chat__sidebar__search-bar">
+        <input type="text" placeholder="Search person...">
+      </div>
+      <!-- /SEARCH -->
+      <!-- ROOMS -->
+      <div class="chat__sidebar__rooms">
+        <div class="sidebar__rooms__title">
+            <h4>ROOMS</h4>
+            <button class="ui-button_icon">
+              <i class="fas fa-plus"></i>
+            </button>
+            <button class="ui-button_icon">
+              <i class="fas fa-chevron-down"></i>
+            </button>
+        </div>
+        <div class="sidebar__rooms__list">
+          <div class="room">
+            <div class="room__avatar">
+              <i class="far fa-user-circle fa-2x"></i>
+            </div>
+            <div class="room__data">
+              <h4>Room-1</h4>
+            </div>
+          </div>
+          <div class="room">
+            <div class="room__avatar">
+              <i class="far fa-user-circle fa-2x"></i>
+            </div>
+            <div class="room__data">
+              <h4>Room-2</h4>
+            </div>
+          </div>
+          <div class="room">
+            <div class="room__avatar">
+              <i class="far fa-user-circle fa-2x"></i>
+            </div>
+            <div class="room__data">
+              <h4>Room-3</h4>
+            </div>
+          </div>
+          <div class="room">
+            <div class="room__avatar">
+              <i class="far fa-user-circle fa-2x"></i>
+            </div>
+            <div class="room__data">
+              <h4>Room-4</h4>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- /ROOMS -->
+      <!-- USERS -->
+      <div class="chat__sidebar__users">
+        <div class="sidebar__users__title">
+            <h4>USERS</h4>
+            <button class="ui-button_icon">
+              <i class="fas fa-chevron-down"></i>
+            </button>
+        </div>
+        <div class="sidebar__users__list">
+          <div class="user">
+            <div class="user__avatar">
+              <i class="far fa-user-circle fa-3x"></i>
+              <span class="online"></span>
+            </div>
+            <div class="user__data">
+              <div class="user__data__name-text">
+                <h4>Jon Snow</h4>
+                <p>lorem ipsum dollor...</p>
+              </div>
+              <div class="user__data__noti">3</div>
+            </div>
+          </div>
+          <div class="user">
+            <div class="user__avatar">
+              <i class="far fa-user-circle fa-3x"></i>
+              <span class="offline"></span>
+            </div>
+            <div class="user__data">
+              <div class="user__data__name-text">
+                <h4>Chack Noris</h4>
+                <p>lorem ipsum dollor...</p>
+              </div>
+              <div class="user__data__noti">4</div>
+            </div>
+          </div>
+          <div class="user">
+            <div class="user__avatar">
+              <i class="far fa-user-circle fa-3x"></i>
+              <span class="online"></span>
+            </div>
+            <div class="user__data">
+              <div class="user__data__name-text">
+                <h4>Jon Snow</h4>
+                <p>lorem ipsum dollor...</p>
+              </div>
+              <div class="user__data__noti">3</div>
+            </div>
+          </div>
+          <div class="user">
+            <div class="user__avatar">
+              <i class="far fa-user-circle fa-3x"></i>
+              <span class="offline"></span>
+            </div>
+            <div class="user__data">
+              <div class="user__data__name-text">
+                <h4>Chack Noris</h4>
+                <p>lorem ipsum dollor...</p>
+              </div>
+              <div class="user__data__noti">4</div>
+            </div>
+          </div>
+          <div class="user">
+            <div class="user__avatar">
+              <i class="far fa-user-circle fa-3x"></i>
+              <span class="online"></span>
+            </div>
+            <div class="user__data">
+              <div class="user__data__name-text">
+                <h4>Jon Snow</h4>
+                <p>lorem ipsum dollor...</p>
+              </div>
+              <div class="user__data__noti">3</div>
+            </div>
+          </div>
+          <div class="user">
+            <div class="user__avatar">
+              <i class="far fa-user-circle fa-3x"></i>
+              <span class="offline"></span>
+            </div>
+            <div class="user__data">
+              <div class="user__data__name-text">
+                <h4>Chack Noris</h4>
+                <p>lorem ipsum dollor...</p>
+              </div>
+              <div class="user__data__noti">4</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- /USERS -->
+    </div>
+    <div class="chat__main"></div>
+  </div>
+
+
+</body>
+</html>

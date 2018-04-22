@@ -1,5 +1,6 @@
 # UI-for-final-task
 <pre> 
+Require Font Awesome 5
 <a href="https://omelenetskiy.github.io/UI-for-final-task">Demo</a>
 
 <b>HEADERS</b>
