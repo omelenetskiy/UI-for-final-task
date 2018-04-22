@@ -136,4 +136,40 @@ button
   &__actions
     padding: 8px
     border-top: 1px solid rgba(155, 155, 155, .2)
+
+// CHECKBOX
+.ui-checkbox
+  display: inline-flex
+  align-items: center
+  user-select: none
+  cursor: pointer
+  span::before
+    content: '\f0c8'
+    font-size: 18px
+    font-family: "Font Awesome 5 Free"
+    display: inline-block
+    margin-right: 8px
+  input[type=checkbox]
+    display: none
+  input[type=checkbox]:checked + span::before
+    content: '\f14a'
+    font-family: "Font Awesome 5 Free"
+  
+// RADIO
+.ui-radio
+  display: inline-flex
+  align-items: center
+  user-select: none
+  cursor: pointer
+  span::before
+    content: '\f111'
+    font-size: 18px
+    font-family: "Font Awesome 5 Free"
+    display: inline-block
+    margin-right: 8px
+  input[type=radio]
+    display: none
+  input[type=radio]:checked + span::before
+    content: '\f192'
+    font-family: "Font Awesome 5 Free"
     

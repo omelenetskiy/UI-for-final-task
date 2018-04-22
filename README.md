@@ -1,6 +1,6 @@
 # UI-for-final-task
 <pre> 
-demo : https://omelenetskiy.github.io/UI-for-final-task
+<a href="https://omelenetskiy.github.io/UI-for-final-task">Demo</a>
 
 <b>HEADERS</b>
 h1 {.ui-text-display-2;} 
@@ -20,4 +20,25 @@ h5 {.ui-text-subhead;}
   ui-button_icon
   ui-button_flat
   ui-button_raised (you can add icon to this button)
+
+<b>CHECKBOX</b>
+.ui-checkbox
+  <code>
+    <label class="ui-checkbox">
+      <input type="checkbox">
+      <span></span>
+      Checkbox-2
+    </label>
+  </code>
+
+<b>RADIO</b>
+.ui-radio
+  <code>
+    <label class="ui-radio">
+      <input type="radio">
+      <span></span>
+      Radio-2
+    </label>
+  </code>
+
 </pre>

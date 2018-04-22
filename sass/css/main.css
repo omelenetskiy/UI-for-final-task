@@ -221,3 +221,65 @@ button i {
   padding: 8px;
   border-top: 1px solid rgba(155, 155, 155, 0.2);
 }
+
+.ui-checkbox {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  cursor: pointer;
+}
+
+.ui-checkbox span::before {
+  content: '\f0c8';
+  font-size: 18px;
+  font-family: "Font Awesome 5 Free";
+  display: inline-block;
+  margin-right: 8px;
+}
+
+.ui-checkbox input[type=checkbox] {
+  display: none;
+}
+
+.ui-checkbox input[type=checkbox]:checked + span::before {
+  content: '\f14a';
+  font-family: "Font Awesome 5 Free";
+}
+
+.ui-radio {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  cursor: pointer;
+}
+
+.ui-radio span::before {
+  content: '\f111';
+  font-size: 18px;
+  font-family: "Font Awesome 5 Free";
+  display: inline-block;
+  margin-right: 8px;
+}
+
+.ui-radio input[type=radio] {
+  display: none;
+}
+
+.ui-radio input[type=radio]:checked + span::before {
+  content: '\f192';
+  font-family: "Font Awesome 5 Free";
+}
