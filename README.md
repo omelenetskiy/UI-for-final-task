@@ -1,6 +1,6 @@
 # UI-for-final-task
-
-h1 {.ui-text-display-2;}
+<pre> 
+h1 {.ui-text-display-2;} 
 h2 {.ui-text-display-1;}
 h3 {.ui-text-headline;}
 h4 {.ui-text-title;}
@@ -17,3 +17,4 @@ BUTTON
   ui-button_icon
   ui-button_flat
   ui-button_raised (you can add icon to this button)
+</pre>
