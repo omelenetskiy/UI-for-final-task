@@ -59,14 +59,21 @@ body {
 }
 
 .chat__sidebar__logged-user .logged-user__wrapper {
-  display: inline-flex;
+  display: flex;
   flex-direction: row;
   align-items: center;
+  flex: 1;
+  min-width: 0;
 }
 
 .chat__sidebar__logged-user .logged-user__wrapper .logged-user__avatar {
   margin-right: 8px;
   color: #0B3835;
+}
+
+.chat__sidebar__logged-user .logged-user__wrapper .logged-user__data {
+  flex: 1;
+  min-width: 0;
 }
 
 .chat__sidebar__logged-user .logged-user__wrapper .logged-user__data h4, .chat__sidebar__logged-user .logged-user__wrapper .logged-user__data h5 {
@@ -77,6 +84,10 @@ body {
 
 .chat__sidebar__logged-user .logged-user__wrapper .logged-user__data h4 {
   font-weight: 500;
+  flex: 1;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .chat__sidebar__logged-user .logged-user__wrapper .logged-user__data h5 {
@@ -166,6 +177,8 @@ body {
   display: inline-flex;
   flex-direction: row;
   align-items: center;
+  flex: 1;
+  min-width: 0;
 }
 
 .chat__sidebar__users .sidebar__users__list .user:hover {
@@ -204,17 +217,36 @@ body {
   align-items: center;
   justify-content: space-between;
   flex-grow: 1;
+  flex: 1;
+  min-width: 0;
+}
+
+.chat__sidebar__users .sidebar__users__list .user__data__name-text {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-width: 0;
+}
+
+.chat__sidebar__users .sidebar__users__list .user__data__name-text h4 {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .chat__sidebar__users .sidebar__users__list .user__data__name-text p {
   margin: 0;
   padding: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .chat__sidebar__users .sidebar__users__list .user__data__noti {
   background-color: #aed581;
   color: #ffffff;
   padding: 1px 5px;
+  margin-left: 15px;
   border-radius: 4px;
 }
 

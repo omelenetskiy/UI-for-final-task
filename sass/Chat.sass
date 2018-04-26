@@ -13,6 +13,7 @@ $chat-height: $room-height * 3 + $user-height * 4 + $search-bar-height + $logged
 
 .ui-button.ui-button_icon
   color: $dark-green
+  
 @mixin scrollbar($size, $primary, $secondary: lighten($primary, 25%))
   ::-webkit-scrollbar
     width:  $size
@@ -61,19 +62,27 @@ body
       padding: 16px
       border-bottom: 1px solid $borser-separator-color
       .logged-user__wrapper
-        display: inline-flex
+        display: flex
         flex-direction: row
         align-items: center
+        flex: 1
+        min-width: 0
         .logged-user__avatar
           margin-right: 8px
           color: $dark-green
         .logged-user__data
+          flex: 1
+          min-width: 0
           h4, h5
             margin: 0
             padding: 0
             line-height: 1
           h4
             font-weight: 500
+            flex: 1
+            white-space: nowrap
+            overflow: hidden
+            text-overflow: ellipsis
           h5 
             font-size: 12px
     &__search-bar
@@ -141,6 +150,8 @@ body
           display: inline-flex
           flex-direction: row
           align-items: center
+          flex: 1
+          min-width: 0
           &:hover
             cursor: pointer
             background-color: $green-color-light
@@ -167,14 +178,28 @@ body
             align-items: center
             justify-content: space-between 
             flex-grow: 1
+            flex: 1
+            min-width: 0
             &__name-text
+              display: flex
+              flex-direction: column
+              flex: 1
+              min-width: 0
+              h4
+                white-space: nowrap
+                overflow: hidden
+                text-overflow: ellipsis
               p
                 margin: 0
                 padding: 0
+                white-space: nowrap
+                overflow: hidden
+                text-overflow: ellipsis
             &__noti
               background-color: $green-color
               color: #ffffff
               padding: 1px 5px
+              margin-left: 15px
               border-radius: 4px
   &__main
     background-color: $green-color-light
