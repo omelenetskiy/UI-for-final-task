@@ -9,7 +9,7 @@ $user-height: 58px
 $search-bar-height: 50px
 $logged-user-bar-height: 75px
 $sidebar-title-bar-height: 54px
-$chat-height: $room-height * 3 + $user-height * 4 + $search-bar-height + $logged-user-bar-height + $sidebar-title-bar-height
+$chat-height: $room-height * 3 + $user-height * 4 + $search-bar-height + $logged-user-bar-height + $sidebar-title-bar-height * 2
 
 .ui-button.ui-button_icon
   color: $dark-green
@@ -81,7 +81,7 @@ body
       height: $search-bar-height
       display: inline-flex
       align-items: center
-      justify-content: center
+      justify-content: space-around
       padding: 8px 16px
       border-bottom: 1px solid $borser-separator-color
       input[type=text]
@@ -89,10 +89,11 @@ body
         background-color: $green-color-light
         border: 0
         padding: 8px
+        margin-right: 8px
         border-radius: 4px
         color: #000000
         &:focus
-          border: 2px solid $green-color
+          outline: 2px solid $green-color
     &__rooms
       .sidebar__rooms__title
         width: 100%
