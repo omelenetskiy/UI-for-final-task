@@ -1,7 +1,9 @@
 $green-color: rgb(174, 213, 129)
 $green-color-light: rgba(174, 213, 129, .2)
+$borser-separator-color: rgba(155, 155, 155, .2)
 $online: #4CAF50
 $offline: #FF7043
+$dark-green: #0B3835
 $room-height: 45px
 $user-height: 58px
 $search-bar-height: 50px
@@ -9,10 +11,24 @@ $logged-user-bar-height: 75px
 $sidebar-title-bar-height: 54px
 $chat-height: $room-height * 3 + $user-height * 4 + $search-bar-height + $logged-user-bar-height + $sidebar-title-bar-height
 
+.ui-button.ui-button_icon
+  color: $dark-green
+@mixin scrollbar($size, $primary, $secondary: lighten($primary, 25%))
+  ::-webkit-scrollbar
+    width:  $size
+    height: $size
+  ::-webkit-scrollbar-thumb
+    background: $primary
+    border-radius: 4px
+  ::-webkit-scrollbar-track
+    background: $secondary
+
+@include scrollbar(5px, #aed581);
+  
 body
   display: flex
   padding: 15px
-  background-image: url('../../img/bg/mountains.jpg')
+  background-image: url('../img/bg/mountains.jpg')
   background-size: cover
   background-repeat: no-repeat
   background-position: center
@@ -21,6 +37,7 @@ body
   margin: auto
   height: $chat-height
   width: 100%
+  min-width: 800px
   max-width: 1000px
   display: inline-flex
   flex-direction: row
@@ -30,7 +47,9 @@ body
   &__sidebar
     background-color: #fff
     height: 100%
+    min-width: 300px
     width: 300px
+    border-right: 1px solid $borser-separator-color
     &__logged-user
       width: 100%
       height: $logged-user-bar-height
@@ -40,13 +59,14 @@ body
       align-items: center
       justify-content: space-between
       padding: 16px
-      border-bottom: 1px solid rgba(155, 155, 155, .2)
+      border-bottom: 1px solid $borser-separator-color
       .logged-user__wrapper
         display: inline-flex
         flex-direction: row
         align-items: center
         .logged-user__avatar
           margin-right: 8px
+          color: $dark-green
         .logged-user__data
           h4, h5
             margin: 0
@@ -63,8 +83,9 @@ body
       align-items: center
       justify-content: center
       padding: 8px 16px
-      border-bottom: 1px solid rgba(155, 155, 155, .2)
+      border-bottom: 1px solid $borser-separator-color
       input[type=text]
+        width: 100%
         background-color: $green-color-light
         border: 0
         padding: 8px
@@ -81,7 +102,7 @@ body
         flex-direction: row
         align-items: center
         justify-content: space-between
-        border-bottom: 1px solid rgba(155, 155, 155, .2)
+        border-bottom: 1px solid $borser-separator-color
       .sidebar__rooms__list
         height: $room-height * 3
         overflow: auto
@@ -97,6 +118,7 @@ body
             background-color: $green-color-light
           &__avatar
             margin-right: 8px
+            color: $dark-green
     &__users
       .sidebar__users__title
         width: 100%
@@ -106,8 +128,8 @@ body
         flex-direction: row
         align-items: center
         justify-content: space-between
-        border-top: 1px solid rgba(155, 155, 155, .2)
-        border-bottom: 1px solid rgba(155, 155, 155, .2)
+        border-top: 1px solid $borser-separator-color
+        border-bottom: 1px solid $borser-separator-color
       .sidebar__users__list
         overflow: auto
         height: $user-height * 4
@@ -124,6 +146,7 @@ body
           &__avatar
             margin-right: 8px
             position: relative
+            color: $dark-green
             span.online, span.offline
               display: block
               position: absolute
@@ -154,5 +177,98 @@ body
               border-radius: 4px
   &__main
     background-color: $green-color-light
+    // background-image: url('../img/bg/react-logo.png')
+    background-repeat: no-repeat
+    background-position: center
     height: 100%
     flex-grow: 1
+    display: inline-flex
+    flex-direction: column
+    justify-content: space-between
+    &__header
+      width: 100%
+      display: inline-flex
+      align-items: center
+      flex-direction: row
+      justify-content: space-between      
+      min-height: 75px
+      height: 75px
+      padding: 0 8px
+      background-color: #fff
+      display: flex
+      border-bottom: 1px solid $borser-separator-color
+      .ui-text-headline
+        margin: 0
+        padding: 0
+      &__logo
+        display: inline-flex
+    &__messages
+      flex-grow: 1
+      overflow: hidden
+      overflow: auto
+      padding: 10px
+      .message
+        width: 100%
+        display: inline-flex
+        flex-direction: row
+        flex-wrap: nowrap
+        align-items: flex-start
+        margin: 15px 0
+        &__avatar
+          margin-right: 25px
+          color: $dark-green
+        &__data
+          display: inline-flex
+          flex-direction: column
+          align-items: flex-start
+          background-color: #fff
+          padding: 8px
+          border-radius: 4px
+          position: relative
+          p
+            margin-bottom: 0
+          &::before
+            content: ''
+            position: absolute
+            left: -10px
+            top: 0
+            width: 0
+            height: 0
+            border-top: 13px solid #ffffff
+            border-left: 13px solid transparent
+          &__text
+            max-width: 400px
+          &__timestamp
+            p
+              margin: 0
+              color: lightgray
+      .message.message-prop
+        flex-direction: row-reverse
+        .message__avatar
+          margin-right: 0
+          margin-left: 25px
+        .message__data
+          display: inline-flex
+          flex-direction: column
+          align-items: flex-end
+          &::before
+            left: auto
+            right: -10px
+            border-left: 0
+            border-right: 13px solid transparent
+    &__form
+      background-color: #fff
+      .input__form
+        width: 100%
+        min-height: 60px
+        height: 60px
+        padding: 10px 8px
+        display: inline-flex
+        flex-direction: row
+        flex-wrap: nowrap
+        justify-content: space-between
+        border-top: 1px solid $borser-separator-color
+        input[type=text]
+          flex-grow: 1
+          border: 0
+          padding: 0 10px
